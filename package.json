@@ -1,31 +1,22 @@
 {
-  "name": "web-smk",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "framer-motion": "^13.1.0",
-    "lucide-react": "^1.31.0",
-    "next": "16.3.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "tailwind-merge": "^3.6.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.5.4",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.0",
-    "postcss": "^8.5.26",
-    "tailwindcss": "^3.4.19",
-    "typescript": "^5"
-  }
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@rolldown/binding-win32-x64-msvc": "^1.2.5",
+        "@tailwindcss/vite": "^4.0.0",
+        "autoprefixer": "^10.5.4",
+        "concurrently": "^10.0.3",
+        "laravel-vite-plugin": "^3.1",
+        "postcss": "^8.5.26",
+        "tailwindcss": "^4.3.3",
+        "vite": "^8.0.0"
+    },
+    "optionalDependencies": {
+        "@laravel/multiplex": "^0.4.1"
+    }
 }
