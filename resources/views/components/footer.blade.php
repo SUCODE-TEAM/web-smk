@@ -7,7 +7,7 @@
             <!-- Col 1: School Identity -->
             <div>
                 <div class="font-headline-md text-headline-md font-bold text-on-primary mb-xs flex items-center gap-xs">
-                    <span class="material-symbols-outlined text-secondary-container">school</span>
+                    <img src="{{ asset('images/logo-smkn2.png') }}" alt="Logo SMKN 2 Yogyakarta" class="w-8 h-8 object-contain" />
                     {{ $profile['name'] ?? 'SMK Negeri 2 Yogyakarta' }}
                 </div>
                 <div class="text-xs text-primary-fixed-dim font-medium mb-sm">

@@ -4,9 +4,11 @@
 <nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50 shadow-sm">
     <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
         <a href="{{ url('/') }}" class="flex items-center gap-sm group">
-            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow">
-                <span class="material-symbols-outlined text-[24px]">school</span>
-            </div>
+            <img 
+                src="{{ asset('images/logo-smkn2.png') }}" 
+                alt="Logo SMK Negeri 2 Yogyakarta" 
+                class="w-12 h-12 object-contain drop-shadow-sm transition-transform duration-200 group-hover:scale-105" 
+            />
             <div>
                 <div class="font-headline-md text-headline-md font-bold text-primary group-hover:text-secondary transition-colors">
                     {{ $profile['name'] ?? 'SMK Negeri 2 Yogyakarta' }}
