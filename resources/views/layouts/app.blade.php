@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $title ?? 'SMK Hebat - Homepage' }}</title>
+    <title>{{ $title ?? 'SMK Negeri 2 Yogyakarta - Pelopor Vokasi Sejak 1919' }}</title>
 
     <!-- Google Fonts & Material Symbols -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,13 @@
 </head>
 <body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
 
-    <x-navbar />
+    <x-navbar :profile="$schoolProfile ?? null" />
 
     <main class="flex-grow">
         @yield('content')
     </main>
 
-    <x-footer />
+    <x-footer :profile="$schoolProfile ?? null" />
 
 </body>
 </html>

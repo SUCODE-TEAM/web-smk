@@ -1,23 +1,39 @@
+@props(['profile' => null])
+
 <!-- Hero Section -->
-<header class="relative bg-surface-container w-full h-[600px] flex items-center justify-center overflow-hidden">
+<header class="relative bg-surface-container w-full min-h-[580px] md:h-[620px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img 
             src="{{ asset('images/smkn2-hero.jpg') }}" 
-            alt="Gedung SMK Negeri 2 Yogyakarta"
-            class="w-full h-full object-cover opacity-85" 
+            alt="Gedung Bersejarah SMK Negeri 2 Yogyakarta"
+            class="w-full h-full object-cover object-center brightness-90 contrast-105" 
         />
-        <div class="absolute inset-0 bg-primary-container/40 mix-blend-multiply"></div>
+        <!-- Multi-layer gradient overlay for high contrast and readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/40"></div>
     </div>
     
-    <div class="relative z-10 text-center px-gutter max-w-[800px] mx-auto text-on-primary">
-        <h1 class="font-display-lg text-display-lg text-on-primary mb-md drop-shadow-md">
-            Membentuk Generasi Kompeten &amp; Berkarakter
+    <div class="relative z-10 text-center px-gutter max-w-[880px] mx-auto text-on-primary py-xl">
+        <div class="inline-flex items-center gap-xs bg-secondary-container/90 text-on-primary px-sm py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-md shadow-sm">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            Cagar Budaya &bull; Pusat Keunggulan Vokasi
+        </div>
+
+        <h1 class="font-display-lg text-display-lg text-on-primary mb-md drop-shadow-lg leading-tight">
+            Membentuk Generasi Unggul, Kompeten &amp; Berkarakter
         </h1>
-        <p class="font-body-lg text-body-lg text-on-primary/90 mb-lg drop-shadow-sm">
-            Sekolah Menengah Kejuruan Pusat Keunggulan dengan fasilitas modern dan kurikulum industri.
+
+        <p class="font-body-lg text-body-lg text-on-primary/95 mb-lg drop-shadow max-w-[760px] mx-auto">
+            {{ $profile['name'] ?? 'SMK Negeri 2 Yogyakarta' }} — Pelopor pendidikan teknik menengah di Indonesia sejak 1919 (Princess Juliana School / STM Jetis) dengan kurikulum industri berstandar global.
         </p>
-        <button class="bg-primary text-on-primary font-label-md text-label-md h-[48px] px-lg rounded border border-primary hover:bg-primary-fixed-dim transition-colors">
-            Lihat Selengkapnya
-        </button>
+
+        <div class="flex flex-wrap items-center justify-center gap-sm">
+            <a href="#jurusan" class="bg-primary text-on-primary font-label-md text-label-md h-[48px] px-lg rounded border border-primary-fixed-dim hover:bg-primary-fixed-dim hover:text-primary transition-all inline-flex items-center gap-xs shadow-md">
+                <span>Eksplorasi 9 Jurusan</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+            </a>
+            <a href="#profil" class="bg-surface-container-lowest/20 backdrop-blur text-on-primary font-label-md text-label-md h-[48px] px-lg rounded border border-white/40 hover:bg-surface-container-lowest/30 transition-all inline-flex items-center gap-xs">
+                <span>Profil &amp; Visi Misi</span>
+            </a>
+        </div>
     </div>
 </header>

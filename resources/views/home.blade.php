@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-hero />
-    <x-about />
-    <x-majors />
-    <x-stats />
-    <x-news />
+    <x-hero :profile="$schoolProfile ?? null" />
+    <x-about :profile="$schoolProfile ?? null" />
+    <x-majors :majors="$majors ?? []" />
+    <x-stats :stats="$stats ?? []" />
+    <x-news :news="$news ?? []" />
 @endsection
