@@ -14,7 +14,7 @@
                     {{ $profile['name'] ?? 'SMK Negeri 2 Yogyakarta' }}
                 </div>
                 <div class="text-[11px] text-on-surface-variant font-medium tracking-wide">
-                    STM JETIS &bull; EST. 1919
+                    The Industrial Cultur School
                 </div>
             </div>
         </a>
