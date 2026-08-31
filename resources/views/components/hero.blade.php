@@ -13,11 +13,6 @@
     </div>
     
     <div class="relative z-10 text-center px-gutter max-w-[880px] mx-auto text-on-primary py-xl">
-        <div class="inline-flex items-center gap-xs bg-secondary-container/90 text-on-primary px-sm py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-md shadow-sm">
-            <span class="material-symbols-outlined text-[16px]">verified</span>
-            Cagar Budaya &bull; Pusat Keunggulan Vokasi
-        </div>
-
         <h1 class="font-display-lg text-display-lg text-on-primary mb-md drop-shadow-lg leading-tight">
             Membentuk Generasi Unggul, Kompeten &amp; Berkarakter
         </h1>
