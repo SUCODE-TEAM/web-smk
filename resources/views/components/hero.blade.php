@@ -2,9 +2,9 @@
 <header class="relative bg-surface-container w-full h-[600px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk0S4PEBdq8_LbGAurJPXOs5XUdbKPcq4iAij5cPmUWKOAkiHnuMAURy6TvTRY4ayFOLlZGmVsYF8zDv_B7f0_dZYnpjm9Or8FFakj0--SsDp1SN7Fjpv_WnO46R4khuD7pLEWAWo-9N6kykxZb9YPH-DWeSczQBGIOXsupT-iw7gYbIdmVn8yek7TaTO0uVWSlmWjAQrnESj007XS2WEHCrjTTf9ps2d6dnQ5BHUzIGVN9IZtrqqaKg" 
-            alt="Students in a modern vocational workshop"
-            class="w-full h-full object-cover opacity-80" 
+            src="{{ asset('images/smkn2-hero.jpg') }}" 
+            alt="Gedung SMK Negeri 2 Yogyakarta"
+            class="w-full h-full object-cover opacity-85" 
         />
         <div class="absolute inset-0 bg-primary-container/40 mix-blend-multiply"></div>
     </div>
