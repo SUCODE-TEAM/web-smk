@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Sekolah - SMK Negeri 2 Yogyakarta</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Work+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
+        <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-headline-md font-bold text-primary">
+                SMK Negeri 2 Yogyakarta
+            </div>
+            
+            <ul class="hidden md:flex gap-lg items-center">
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Home</a>
+                </li>
+                <li>
+                    <a href="tentang.html" class="text-secondary border-b-2 border-secondary pb-1 font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Profil</a>
+                </li>
+                <li>
+                    <a href="jurusan.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Jurusan</a>
+                </li>
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Berita</a>
+                </li>
+                <li>
+                    <a href="#" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Kontak</a>
+                </li>
+            </ul>
+
+            <a href="ppdb.html" class="bg-primary-container text-on-primary font-label-md text-label-md h-[40px] px-sm rounded hover:opacity-80 transition-opacity flex items-center justify-center">
+                Pendaftaran
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-grow">
+        <!-- Hero Profil -->
+        <section class="relative min-h-[60vh] flex items-center justify-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="public/images/smkn2-hero.jpg" alt="Gedung SMKN 2 Yogyakarta" class="w-full h-full object-cover z-0" />
+            </div>
+            <div class="absolute inset-0 bg-slate-900/80 z-10" style="background-color: rgba(15, 23, 42, 0.8);"></div>
+            <div class="container mx-auto px-4 relative z-20 text-center text-white">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6">
+                    <span class="material-symbols-outlined text-[16px]">account_balance</span> Gedung Cagar Budaya Nasional — Didirikan 1919
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 font-display-lg">
+                    Profil <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-300">Sekolah</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+                    Eks. Princess Juliana School (PJS) / STM 1 Yogyakarta — Sekolah teknik tertua dan paling bersejarah di Indonesia, membentuk tenaga profesional berkelas dunia selama lebih dari satu abad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Identitas -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Nama Resmi</h3>
+                        <p class="text-xl font-bold text-slate-900">SMK Negeri 2 Yogyakarta</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Nama Sejarah</h3>
+                        <p class="text-xl font-bold text-slate-900">STM 1 Yogyakarta / Princess Juliana School (PJS)</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Didirikan</h3>
+                        <p class="text-xl font-bold text-slate-900">1919</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Akreditasi</h3>
+                        <p class="text-xl font-bold text-slate-900">A</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Sertifikasi</h3>
+                        <p class="text-xl font-bold text-slate-900">ISO 9001:2008 (TÜV Rheinland)</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                        <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Luas Area</h3>
+                        <p class="text-xl font-bold text-slate-900">5,5 Hektar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi & Misi -->
+        <section class="py-24 bg-slate-900 text-white relative overflow-hidden" style="background-color: #0f172a;">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2 block">Visi & Misi</span>
+                    <h2 class="text-3xl md:text-4xl font-black font-headline-lg">Fondasi <span class="text-blue-400">Pendidikan Kami</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-colors">
+                        <div class="w-16 h-16 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[32px]">visibility</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-headline-md">Visi</h3>
+                        <p class="text-lg text-slate-300 leading-relaxed">Menghasilkan Tamatan Yang Berkarakter, Unggul, Berwawasan Lingkungan, dan Berdaya Saing Global</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-colors">
+                        <div class="w-16 h-16 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[32px]">ads_click</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-headline-md">Misi</h3>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">1.</span><span>Mengembangkan kurikulum pembelajaran berbasis Teaching Factory (TEFA)</span></li>
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">2.</span><span>Mengembangkan budaya literasi numerik, digital, finansial, sains, dan bahasa</span></li>
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">3.</span><span>Mengembangkan kompetensi peserta didik sesuai dengan bakat dan minat</span></li>
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">4.</span><span>Menyelenggarakan pembelajaran dan manajemen sekolah berbasis TIK</span></li>
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">5.</span><span>Meningkatkan fasilitas dan lingkungan belajar yang aman, nyaman, ramah lingkungan, ramah anak dan responsif gender</span></li>
+                            <li class="flex gap-3"><span class="text-blue-400 font-bold">6.</span><span>Menerapkan Perilaku Ramah Lingkungan Hidup (PRLH) menuju sekolah adiwiyata nasional</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Sejarah -->
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Perjalanan Waktu</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-headline-lg">Sejarah <span class="text-blue-600">Panjang Kami</span></h2>
+                    <p class="text-slate-600">Dari Princess Juliana School 1919 hingga menjadi SMK Negeri 2 Yogyakarta yang modern dan bertaraf internasional.</p>
+                </div>
+                
+                <div class="relative border-l-2 border-slate-200 ml-3 md:mx-auto">
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">1919</span>
+                            <p class="text-slate-700 font-medium">Didirikan sebagai Princess Juliana School (PJS) pada masa Hindia Belanda</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">1951</span>
+                            <p class="text-slate-700 font-medium">Ijazah pertama Sekolah Teknik Menengah Yogyakarta dikeluarkan</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">1952</span>
+                            <p class="text-slate-700 font-medium">Dipecah menjadi STM Negeri I (Bangunan & Kimia) dan STM Negeri II (Listrik & Mesin)</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">1975</span>
+                            <p class="text-slate-700 font-medium">Semua STM di kompleks Jetis digabung menjadi STM Yogyakarta I</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">1997</span>
+                            <p class="text-slate-700 font-medium">Resmi berubah nama menjadi SMK Negeri 2 Yogyakarta</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">2007</span>
+                            <p class="text-slate-700 font-medium">Gedung ditetapkan sebagai Cagar Budaya oleh Menteri Kebudayaan dan Pariwisata</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">2008</span>
+                            <p class="text-slate-700 font-medium">Meraih Sertifikat ISO 9001:2000 dari TÜV Rheinland, diserahkan oleh Mendikbud</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">2015</span>
+                            <p class="text-slate-700 font-medium">Menjadi Sekolah Rujukan Nasional & Sekolah Berintegritas (poin 99,6)</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <span class="text-2xl font-black text-slate-200 block mb-2 font-display-md">Kini</span>
+                            <p class="text-slate-700 font-medium">9 Program Keahlian, 100+ mitra industri, lulusan tersebar di seluruh Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 bg-blue-600 text-center px-4" style="background-color: #2563eb;">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-headline-lg">Lebih dari 105 Tahun Mencetak Profesional</h2>
+            <p class="text-slate-200 mb-10 max-w-2xl mx-auto">Bergabunglah dengan sejarah panjang SMKN 2 Yogyakarta dan wujudkan cita-cita masa depanmu bersama kami.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="ppdb.html" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-full hover:scale-105 transition-transform">
+                    Daftar Siswa Baru
+                </a>
+                <a href="jurusan.html" class="px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-colors border border-white/20">
+                    Lihat Program Keahlian
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary mt-auto">
+        <div class="w-full py-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-md">
+            <div>
+                <div class="font-headline-md text-headline-md font-bold text-on-primary mb-sm">
+                    SMK Negeri 2 Yogyakarta
+                </div>
+                <p class="font-caption text-caption text-on-primary/80">
+                    &copy; 2024 SMK Negeri 2 Yogyakarta. All rights reserved.<br>
+                    Jl. A.M. Sangaji No. 47, Yogyakarta<br>
+                    (0274) 513490 | info@smk2-yk.sch.id
+                </p>
+            </div>
+            
+            <ul class="flex flex-col md:flex-row gap-sm md:gap-lg">
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Privacy Policy</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Terms of Service</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Sitemap</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

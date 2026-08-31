@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Keahlian - SMK Negeri 2 Yogyakarta</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Work+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        .tab-button.active { background-color: #2563eb; color: white; border-color: #2563eb; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-body-md antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
+        <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-headline-md font-bold text-primary">
+                SMK Negeri 2 Yogyakarta
+            </div>
+            
+            <ul class="hidden md:flex gap-lg items-center">
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Home</a>
+                </li>
+                <li>
+                    <a href="tentang.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Profil</a>
+                </li>
+                <li>
+                    <a href="jurusan.html" class="text-secondary border-b-2 border-secondary pb-1 font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Jurusan</a>
+                </li>
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Berita</a>
+                </li>
+                <li>
+                    <a href="#" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Kontak</a>
+                </li>
+            </ul>
+
+            <a href="ppdb.html" class="bg-primary-container text-on-primary font-label-md text-label-md h-[40px] px-sm rounded hover:opacity-80 transition-opacity flex items-center justify-center">
+                Pendaftaran
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-grow container mx-auto px-4 max-w-7xl py-12">
+        <div class="text-center mb-12">
+            <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Jelajahi Pilihan</span>
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">Program <span class="text-blue-600">Keahlian</span></h1>
+            <p class="text-slate-600 max-w-2xl mx-auto">Terdapat 9 program keahlian unggulan di SMK Negeri 2 Yogyakarta yang disesuaikan dengan kebutuhan industri masa depan.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <div class="w-full md:w-1/3 lg:w-1/4 flex flex-col gap-2">
+                <button onclick="openTab('sija')" class="tab-button active text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>SIJA</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('tkro')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>TKRO</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('dkv')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>DKV / Multimedia</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('titl')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>Teknik Tenaga Listrik</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('tp')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>Teknik Pemesinan</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('dpib')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>DPIB</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('kgsp')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>KGSP</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('tav')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>Audio Video</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+                <button onclick="openTab('geo')" class="tab-button text-left px-4 py-3 rounded-xl border border-slate-200 font-bold hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                    <span>Geomatika</span>
+                    <span class="material-symbols-outlined text-[18px] opacity-50 group-hover:opacity-100">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="w-full md:w-2/3 lg:w-3/4 bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-slate-100 min-h-[500px]">
+                
+                <!-- Tab SIJA -->
+                <div id="sija" class="tab-content active">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">router</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Sistem Informatika, Jaringan dan Aplikasi</h2>
+                            <p class="text-slate-500 font-medium mt-1">SIJA • Program 4 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Program unggulan 4 tahun berstandar internasional. Menguasai cloud computing, keamanan siber, IoT, dan administrasi server. Lulusan langsung bersertifikasi Mikrotik Academy dan siap berkarir sebagai Network Engineer.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Kompetensi Keahlian</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Merancang & instalasi LAN/WAN</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Administrasi server Linux/Windows</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Network Security & Cloud Computing</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Web Database & CMS</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Peluang Karir</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Network Engineer</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Cyber Security Analyst</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Cloud Infrastructure Engineer</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Web Developer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab TKRO -->
+                <div id="tkro" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">directions_car</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Teknik Kendaraan Ringan Otomotif</h2>
+                            <p class="text-slate-500 font-medium mt-1">TKRO • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Jurusan otomotif terlengkap dengan dukungan penuh dari Mitsubishi Motors. Belajar langsung dengan unit kendaraan asli (Outlander Sport) dari CSR KTB. Kurikulum CBT & PBE standar industri global.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Kompetensi Keahlian</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Pemeliharaan mesin (OHV, OHC, EFI)</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Perbaikan sistem injeksi & kelistrikan</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Perbaikan chasis & transmisi</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Engine Tune Up konvensional & EFI</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Peluang Karir</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Mekanik Bengkel Resmi</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Teknisi Otomotif Industri</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Quality Control Kendaraan</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Wirausaha Bengkel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab DKV -->
+                <div id="dkv" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">design_services</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Desain Komunikasi Visual / Multimedia</h2>
+                            <p class="text-slate-500 font-medium mt-1">DKV • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Pusat kreativitas digital SMKN 2 Yogyakarta. Menguasai fotografi, videografi, animasi 2D/3D, desain grafis, dan UI/UX. Dilengkapi studio produksi profesional dan software industri terkini.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Kompetensi Keahlian</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Desain grafis & tipografi</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Fotografi & videografi</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Animasi 2D & 3D</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Desain UI/UX</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2">Peluang Karir</h3>
+                            <ul class="space-y-2">
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Graphic Designer</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> UI/UX Designer</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Video Editor / Animator</li>
+                                <li class="flex gap-2 text-slate-600 text-sm"><span class="text-blue-500">✓</span> Content Creator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab TITL -->
+                <div id="titl" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">bolt</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Teknik Instalasi Tenaga Listrik</h2>
+                            <p class="text-slate-500 font-medium mt-1">TITL • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Ahli kelistrikan industri dan rumah tangga. Menguasai instalasi panel listrik, sistem kendali PLC, dan otomasi industri. Peluang karir terbuka lebar di BUMN kelistrikan dan perusahaan manufaktur.</p>
+                </div>
+
+                <!-- Tab TP -->
+                <div id="tp" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">settings</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Teknik Pemesinan</h2>
+                            <p class="text-slate-500 font-medium mt-1">TP • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Jurusan legendaris sejak era STM 1. Menguasai mesin bubut, frais, gerinda, dan CNC. Lulusan menjadi teknisi presisi tinggi yang dibutuhkan industri manufaktur pesawat, otomotif, dan permesinan.</p>
+                </div>
+
+                <!-- Tab DPIB -->
+                <div id="dpib" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">domain</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Desain Pemodelan & Info Bangunan</h2>
+                            <p class="text-slate-500 font-medium mt-1">DPIB • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Arsitektur dan teknik sipil era digital. Merancang gedung bertingkat menggunakan AutoCAD, SketchUp, dan BIM (Building Information Modeling). Menjadi drafter dan desainer bangunan profesional.</p>
+                </div>
+
+                <!-- Tab KGSP -->
+                <div id="kgsp" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">engineering</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Konstruksi Gedung, Sanitasi & Perawatan</h2>
+                            <p class="text-slate-500 font-medium mt-1">KGSP • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Ahli konstruksi bangunan dan utilitas gedung. Menguasai teknik konstruksi batu beton, pemasangan sanitasi, dan perawatan gedung bertingkat. Lulusan siap bekerja di proyek infrastruktur besar.</p>
+                </div>
+
+                <!-- Tab TAV -->
+                <div id="tav" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">radio</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Teknik Audio Video</h2>
+                            <p class="text-slate-500 font-medium mt-1">TAV • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Spesialis elektronika dan penyiaran. Menguasai sistem tata suara profesional, instalasi perangkat audio visual, perawatan peralatan broadcasting, dan teknologi elektronika terapan.</p>
+                </div>
+
+                <!-- Tab Geomatika -->
+                <div id="geo" class="tab-content">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[32px]">map</span>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Teknik Geomatika</h2>
+                            <p class="text-slate-500 font-medium mt-1">Geomatika • Program 3 Tahun • Akreditasi A</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-8">Menjadi surveyor profesional dan ahli pemetaan modern. Menguasai teknologi GPS, pemetaan drone, pengolahan data spasial dengan GIS, dan levelling presisi untuk proyek berskala besar.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary mt-auto">
+        <div class="w-full py-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-md">
+            <div>
+                <div class="font-headline-md text-headline-md font-bold text-on-primary mb-sm">
+                    SMK Negeri 2 Yogyakarta
+                </div>
+                <p class="font-caption text-caption text-on-primary/80">
+                    &copy; 2024 SMK Negeri 2 Yogyakarta. All rights reserved.<br>
+                    Jl. A.M. Sangaji No. 47, Yogyakarta<br>
+                    (0274) 513490 | info@smk2-yk.sch.id
+                </p>
+            </div>
+            
+            <ul class="flex flex-col md:flex-row gap-sm md:gap-lg">
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Privacy Policy</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Terms of Service</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Sitemap</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Remove active class from buttons
+            document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            // Add active class to clicked button
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

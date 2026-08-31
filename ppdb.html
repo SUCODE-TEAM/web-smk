@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Siswa Baru - SMK Negeri 2 Yogyakarta</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Work+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
+        <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-headline-md font-bold text-primary">
+                SMK Negeri 2 Yogyakarta
+            </div>
+            
+            <ul class="hidden md:flex gap-lg items-center">
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Home</a>
+                </li>
+                <li>
+                    <a href="tentang.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Profil</a>
+                </li>
+                <li>
+                    <a href="jurusan.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Jurusan</a>
+                </li>
+                <li>
+                    <a href="index.html" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Berita</a>
+                </li>
+                <li>
+                    <a href="#" class="text-on-surface-variant hover:text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200">Kontak</a>
+                </li>
+            </ul>
+
+            <a href="ppdb.html" class="bg-primary-container text-on-primary font-label-md text-label-md h-[40px] px-sm rounded hover:opacity-80 transition-opacity flex items-center justify-center border-b-2 border-secondary font-bold">
+                Pendaftaran
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-grow">
+        <!-- Hero PPDB -->
+        <section class="pt-32 pb-20 bg-slate-900 text-center px-4 relative overflow-hidden" style="background-color: #0f172a;">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="container mx-auto max-w-4xl relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 font-bold text-sm mb-6">
+                    <span class="material-symbols-outlined text-[16px]">campaign</span> Informasi Pendaftaran Siswa Baru
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight font-display-lg">
+                    Penerimaan Peserta<br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Didik Baru 2026</span>
+                </h1>
+                
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10">
+                    Bergabunglah dengan The Industrial Culture School. Pendaftaran mengacu pada Petunjuk Teknis PPDB dari Dinas Pendidikan Pemuda dan Olahraga DIY.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://ppdb.jogjaprov.go.id/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-blue-500/20">
+                        Buka Portal PPDB DIY <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                    </a>
+                    <a href="#alur" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-bold rounded-full hover:bg-white/20 transition-colors">
+                        Lihat Alur Pendaftaran
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alur Pendaftaran -->
+        <section id="alur" class="py-24 container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Langkah Demi Langkah</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-headline-lg">Alur <span class="text-blue-600">Pendaftaran</span></h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Ikuti langkah berikut untuk mendaftar menjadi siswa SMKN 2 Yogyakarta melalui sistem PPDB DIY.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors -z-0">01</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">01</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Pengajuan Akun</h3>
+                        <p class="text-sm text-slate-600">Daftarkan diri di situs resmi PPDB DIY untuk mendapatkan token.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors -z-0">02</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">02</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Aktivasi PIN</h3>
+                        <p class="text-sm text-slate-600">Aktivasi akun menggunakan nomor peserta dan token.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors -z-0">03</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">03</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Pilih Sekolah</h3>
+                        <p class="text-sm text-slate-600">Pilih SMKN 2 Yogyakarta dan tentukan program keahlian.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors -z-0">04</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">04</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Seleksi</h3>
+                        <p class="text-sm text-slate-600">Tunggu hasil seleksi sesuai jalur melalui portal PPDB.</p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors -z-0">05</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">05</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Daftar Ulang</h3>
+                        <p class="text-sm text-slate-600">Lakukan daftar ulang secara langsung di sekolah jika diterima.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Persyaratan -->
+        <section class="py-24 bg-white border-y border-slate-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16">
+                    <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Persyaratan</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 font-headline-lg">Syarat <span class="text-blue-600">Pendaftaran</span></h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Syarat 1 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600">
+                            <span class="material-symbols-outlined text-[32px]">assignment</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-headline-md">Syarat Umum</h3>
+                        <ul class="space-y-3">
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Lulus SMP/MTs/sederajat</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Berusia maks 21 tahun pada 1 Juli</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Memiliki Ijazah / SKL</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Terdaftar di Dapodik</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Syarat 2 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-emerald-50 text-emerald-600">
+                            <span class="material-symbols-outlined text-[32px]">medical_services</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-headline-md">Syarat Kesehatan</h3>
+                        <ul class="space-y-3">
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-emerald-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Berbadan sehat (surat dokter)</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-emerald-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Tidak buta warna parsial/total</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-emerald-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Memenuhi standar tinggi badan minimal</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-emerald-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Lolos asesmen minat bakat</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Syarat 3 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600">
+                            <span class="material-symbols-outlined text-[32px]">description</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-headline-md">Berkas Utama</h3>
+                        <ul class="space-y-3">
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Fotocopy Ijazah & SKHUN</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Fotocopy KK & Akta Kelahiran</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Pas foto 3×4 (4 lembar)</span>
+                            </li>
+                            <li class="flex gap-2 text-slate-600 text-sm">
+                                <div class="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0"></div>
+                                <span>Surat keterangan sehat asli</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kuis Minat -->
+        <section class="py-24 container mx-auto px-4 max-w-4xl text-center mb-10">
+            <div class="bg-gradient-to-br from-blue-700 to-blue-900 rounded-3xl p-10 md:p-16 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-400 rounded-full filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6 text-blue-300">
+                        <span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+                    </div>
+                    <h2 class="text-3xl font-black mb-4 font-headline-lg">Bingung Pilih Jurusan?</h2>
+                    <p class="text-slate-300 mb-8 max-w-xl mx-auto text-lg">Ikuti simulasi kuis minat dan bakat kami untuk menemukan program keahlian yang paling cocok dengan passion kamu!</p>
+                    <button class="px-8 py-4 bg-white text-blue-900 font-bold rounded-full hover:scale-105 transition-transform shadow-lg">
+                        Mulai Kuis Penjurusan
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary mt-auto">
+        <div class="w-full py-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-md">
+            <div>
+                <div class="font-headline-md text-headline-md font-bold text-on-primary mb-sm">
+                    SMK Negeri 2 Yogyakarta
+                </div>
+                <p class="font-caption text-caption text-on-primary/80">
+                    &copy; 2024 SMK Negeri 2 Yogyakarta. All rights reserved.<br>
+                    Jl. A.M. Sangaji No. 47, Yogyakarta<br>
+                    (0274) 513490 | info@smk2-yk.sch.id
+                </p>
+            </div>
+            
+            <ul class="flex flex-col md:flex-row gap-sm md:gap-lg">
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Privacy Policy</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Terms of Service</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Sitemap</a></li>
+                <li><a href="#" class="font-label-md text-label-md text-on-primary/80 hover:text-on-primary hover:underline decoration-secondary-container transition-all">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
