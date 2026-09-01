@@ -127,6 +127,81 @@ class HomeController extends Controller
             ],
         ];
 
-        return view('home', compact('schoolProfile', 'majors', 'stats', 'news', 'scrapedData'));
+        $partners = [
+            [
+                'name' => 'PT Kereta Api Indonesia (Persero)',
+                'category' => 'BUMN Transportasi & Perkeretaapian',
+                'icon' => 'train',
+                'color' => 'bg-orange-50 text-orange-600 border-orange-200',
+            ],
+            [
+                'name' => 'PT Astra Honda Motor',
+                'category' => 'Manufaktur Otomotif',
+                'icon' => 'two_wheeler',
+                'color' => 'bg-red-50 text-red-600 border-red-200',
+            ],
+            [
+                'name' => 'PT Telkom Indonesia (Persero) Tbk',
+                'category' => 'Telekomunikasi & Jaringan',
+                'icon' => 'cell_tower',
+                'color' => 'bg-rose-50 text-rose-600 border-rose-200',
+            ],
+            [
+                'name' => 'PT Toyota Motor Manufacturing',
+                'category' => 'Otomotif & Manufaktur Global',
+                'icon' => 'directions_car',
+                'color' => 'bg-red-50 text-red-700 border-red-200',
+            ],
+            [
+                'name' => 'PT Schneider Electric Indonesia',
+                'category' => 'Otomasi & Manajemen Energi',
+                'icon' => 'electrical_services',
+                'color' => 'bg-emerald-50 text-emerald-600 border-emerald-200',
+            ],
+            [
+                'name' => 'PT Komatsu Indonesia',
+                'category' => 'Alat Berat & Rekayasa Mesin',
+                'icon' => 'precision_manufacturing',
+                'color' => 'bg-blue-50 text-blue-600 border-blue-200',
+            ],
+            [
+                'name' => 'PT PLN (Persero)',
+                'category' => 'Kelistrikan & Transmisi Nasional',
+                'icon' => 'electric_bolt',
+                'color' => 'bg-sky-50 text-sky-600 border-sky-200',
+            ],
+            [
+                'name' => 'PT Mayora Indah Tbk',
+                'category' => 'Industri FMCG & Otomasi',
+                'icon' => 'factory',
+                'color' => 'bg-amber-50 text-amber-700 border-amber-200',
+            ],
+            [
+                'name' => 'MikroTik Academy',
+                'category' => 'Sertifikasi Jaringan Global',
+                'icon' => 'router',
+                'color' => 'bg-slate-100 text-slate-700 border-slate-300',
+            ],
+            [
+                'name' => 'PT United Tractors Tbk',
+                'category' => 'Distribusi Alat Berat & Mesin',
+                'icon' => 'construction',
+                'color' => 'bg-yellow-50 text-yellow-700 border-yellow-200',
+            ],
+            [
+                'name' => 'PT Panasonic Gobel Indonesia',
+                'category' => 'Elektronika & Audio Visual',
+                'icon' => 'tv',
+                'color' => 'bg-indigo-50 text-indigo-600 border-indigo-200',
+            ],
+            [
+                'name' => 'PT Gameloft Indonesia',
+                'category' => 'Game & Multimedia Digital',
+                'icon' => 'sports_esports',
+                'color' => 'bg-purple-50 text-purple-600 border-purple-200',
+            ],
+        ];
+
+        return view('home', compact('schoolProfile', 'majors', 'stats', 'news', 'partners', 'scrapedData'));
     }
 }

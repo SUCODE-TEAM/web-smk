@@ -31,3 +31,26 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #455f88;
 }
+
+/* Seamless infinite marquee animation */
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 35s linear infinite;
+    will-change: transform;
+}
+
+.group:hover .animate-marquee,
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
