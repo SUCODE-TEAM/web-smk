@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if (app()->environment('production') || env('APP_ENV') === 'production' || isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL'])) {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
     }
 }
