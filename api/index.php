@@ -31,6 +31,14 @@ $setEnv = function ($key, $val) {
     $_SERVER[$key] = $val;
 };
 
+// Remove any empty environment variables that cause Manager::createDriver() to receive empty string
+foreach (array_keys($_SERVER) as $k) {
+    if (isset($_SERVER[$k]) && $_SERVER[$k] === '') {
+        unset($_SERVER[$k], $_ENV[$k]);
+        putenv($k);
+    }
+}
+
 if (!getenv('APP_KEY')) {
     $setEnv('APP_KEY', 'base64:tKL8zcMtkohJV8LhkN72VCP9tVEvAdKEp/p1TmOSNEE=');
 }
@@ -44,9 +52,13 @@ $setEnv('APP_SERVICES_CACHE', '/tmp/bootstrap/cache/services.php');
 $setEnv('APP_CONFIG_CACHE', '/tmp/bootstrap/cache/config.php');
 $setEnv('APP_ROUTES_CACHE', '/tmp/bootstrap/cache/routes.php');
 $setEnv('APP_EVENTS_CACHE', '/tmp/bootstrap/cache/events.php');
-$setEnv('SESSION_DRIVER', 'cookie');
+$setEnv('SESSION_DRIVER', 'file');
 $setEnv('LOG_CHANNEL', 'stderr');
-$setEnv('CACHE_STORE', 'array');
+$setEnv('CACHE_STORE', 'file');
+$setEnv('QUEUE_CONNECTION', 'sync');
+$setEnv('FILESYSTEM_DISK', 'local');
+$setEnv('MAIL_MAILER', 'log');
+$setEnv('BROADCAST_CONNECTION', 'log');
 $setEnv('DB_CONNECTION', 'sqlite');
 $setEnv('DB_DATABASE', '/tmp/database.sqlite');
 
