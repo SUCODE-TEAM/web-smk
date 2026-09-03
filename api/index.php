@@ -45,6 +45,9 @@ if (!getenv('APP_KEY')) {
 
 $setEnv('APP_DEBUG', 'true');
 $setEnv('APP_ENV', 'production');
+$host = $_SERVER['HTTP_HOST'] ?? 'web-smk-smoky.vercel.app';
+$setEnv('APP_URL', 'https://' . $host);
+$setEnv('ASSET_URL', 'https://' . $host);
 $setEnv('APP_STORAGE', '/tmp/storage');
 $setEnv('VIEW_COMPILED_PATH', '/tmp/storage/framework/views');
 $setEnv('APP_PACKAGES_CACHE', '/tmp/bootstrap/cache/packages.php');
