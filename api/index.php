@@ -16,5 +16,20 @@ foreach ($dirs as $dir) {
     }
 }
 
+// Ensure crucial environment variables are set for Vercel serverless
+if (!getenv('APP_KEY')) {
+    putenv('APP_KEY=base64:tKL8zcMtkohJV8LhkN72VCP9tVEvAdKEp/p1TmOSNEE=');
+}
+
+if (!getenv('APP_DEBUG')) {
+    putenv('APP_DEBUG=true');
+}
+
+putenv('APP_STORAGE=/tmp/storage');
+putenv('VIEW_COMPILED_PATH=/tmp/storage/framework/views');
+putenv('SESSION_DRIVER=cookie');
+putenv('LOG_CHANNEL=stderr');
+putenv('CACHE_STORE=array');
+
 // Forward Vercel requests to normal index.php
 require __DIR__ . '/../public/index.php';
