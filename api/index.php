@@ -59,6 +59,8 @@ $setEnv('QUEUE_CONNECTION', 'sync');
 $setEnv('FILESYSTEM_DISK', 'local');
 $setEnv('MAIL_MAILER', 'log');
 $setEnv('BROADCAST_CONNECTION', 'log');
+$setEnv('APP_MAINTENANCE_DRIVER', 'file');
+$setEnv('APP_MAINTENANCE_STORE', 'file');
 $setEnv('DB_CONNECTION', 'sqlite');
 $setEnv('DB_DATABASE', '/tmp/database.sqlite');
 
